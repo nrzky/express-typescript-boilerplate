@@ -2,13 +2,24 @@
   "name": "express-typescript-boilerplate",
   "version": "0.0.1",
   "description": "Typescript boilerplate for Express JS",
-  "main": "index.js",
+  "main": "dist/server.js",
   "author": "Onur Özkaya",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\"",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "type:check": "tsc --noEmit"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "concurrently": "^8.2.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^35.0.0",
@@ -17,6 +28,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "lefthook": "^1.4.2",
+    "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
     "typescript": "*"
   }
