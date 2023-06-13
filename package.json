@@ -4,5 +4,8 @@
   "description": "Typescript boilerplate for Express JS",
   "main": "index.js",
   "author": "Onur Özkaya",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
 }
